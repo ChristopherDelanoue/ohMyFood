@@ -1,22 +1,29 @@
-body
-    background-color: cornflowerblue
-    margin: 10px
+@use "../sass/responsive.sass";
+@use "../sass/color.sass";
 
+*
+    margin: 0px
+    font-family: 'Roboto', sans-serif
 
-h1
-    color: yellow
-    font-weight: bolder
-
-p
-    color: red
-
-
-div
-    margin: 100px
-    height: 50px
-    background: blue
-
-
-h3
-    color: gold
-    font-size: 19px
+header
+    background-color: '$white'
+    display: flex
+    flex-direction: column
+    img
+        display: block
+        height: 36px
+        border: 1px solid red
+        margin: auto
+        padding: 14px 0px
+    .location
+        display: inline-flex
+        background-color: #EAEAEA
+        width: 100%
+        gap: 17px
+        font-size: 16px
+        align-items: center
+        justify-content: center
+        color: '$darkGrey'
+        height: 50px
+    
+        
