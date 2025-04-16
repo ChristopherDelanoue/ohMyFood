@@ -1,23 +1,22 @@
-@use "../sass/responsive.sass";
-@use "../sass/color.sass";
+@use '../sass/responsive.sass' as responsive;
+@use '../sass/color.sass' as color;
 
 *
     margin: 0px
     font-family: 'Roboto', sans-serif
 
 header
-    background-color: '$white'
+    background-color: color.$white
     display: flex
     flex-direction: column
     img
         display: block
         height: 36px
-        border: 1px solid red
         margin: auto
         padding: 14px 0px
     .location
         display: inline-flex
-        background-color: #EAEAEA
+        background-color: color.$mediumGrey
         width: 100%
         gap: 17px
         font-size: 16px
