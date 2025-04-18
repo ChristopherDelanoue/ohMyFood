@@ -1,19 +1,23 @@
-@use '../sass/responsive.sass' as responsive;
-@use '../sass/color.sass' as color;
+@use '../sass/responsive' as responsive;
+@use '../sass/color' as color;
 
 *
     margin: 0px
     font-family: 'Roboto', sans-serif
 
 header
-    background-color: color.$white
     display: flex
     flex-direction: column
-    img
-        display: block
-        height: 36px
-        margin: auto
-        padding: 14px 0px
+    .logo
+        display: flex
+        position: relative
+        box-shadow: color.$lightShadow
+        img
+            display: block
+            align-content: center
+            height: 36px
+            margin: auto
+            padding: 14px 0px  
     .location
         display: inline-flex
         background-color: color.$mediumGrey
@@ -22,7 +26,98 @@ header
         font-size: 16px
         align-items: center
         justify-content: center
-        color: '$darkGrey'
+        color: color.$darkGrey
         height: 50px
+        box-shadow: color.$shadow
     
+.reservation
+    padding: 50px 20px
+    text-align: center
+    display: flex
+    flex-direction: column
+    background-color: color.$white
+    gap: 20px
+    h1
+        font-weight: 700
+        font-size: 24px
+        padding: 0px 30px
+    p
+        color: color.$darkGrey
+        font-weight: 300
+        font-size: 18px
+        letter-spacing: 0%
+    .button-gradiant
+        @include color.gradiant
+        box-shadow: color.$shadow
+        &:hover
+            cursor: pointer
+
+.fonctionnement 
+    @include color.section
+    h2
+        @include color.h2-conf
+
+    .choix
+        display: flex
+        flex-direction: row
+        gap: 30px
+        border-radius: 20px
+        margin-left: 12px
+        box-shadow: color.$lightShadow
+        justify-content: flex-start
+        background-color: color.$lightGrey
+        align-items: center
+        padding: 30px 40px
+        p
+            color: white
+            background-color: color.$purple
+            text-align: center
+            font-size: 16px
+            font-weight: 500
+            width: 16px
+            height: 16px
+            padding: 4px
+            border-radius: 50%
+            position: absolute
+            left: 20px
+        i
+            color: color.$iconGrey
+            font-size: 16px
+        #purple
+            color: color.$purple
+        h3
+            @include color.h3-conf
+
+.liste-restaurant
+    @include color.section
+    background-color: color.$lightGrey
+    h2
+        @include color.h2-conf
+    .restaurant
+        height: 250px
+        background-color: #fff
+        box-shadow: color.$veryLightShadow
+        border-radius: 15px
+        img
+            height: 70%
+            width: 100%
+            object-fit: cover
+            overflow: auto
+        .banniere-sous-restaurant
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            padding: 13px
+            #like
+               background: color.$gradiant
+               
+            i
+                font-size: 22px
+                align-content: center
+                padding-right: 10px
+            .restaurant-desc
+                display: flex
+                flex-direction: column
+                align-content: space-around
+                gap: 5px
         

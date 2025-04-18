@@ -4,12 +4,17 @@
 }
 
 header {
-  background-color: #F3F3F3;
   display: flex;
   flex-direction: column;
 }
-header img {
+header .logo {
+  display: flex;
+  position: relative;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+header .logo img {
   display: block;
+  align-content: center;
   height: 36px;
   margin: auto;
   padding: 14px 0px;
@@ -22,8 +27,137 @@ header .location {
   font-size: 16px;
   align-items: center;
   justify-content: center;
-  color: "$darkGrey";
+  color: #353535;
   height: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.reservation {
+  padding: 50px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #F3F3F3;
+  gap: 20px;
+}
+.reservation h1 {
+  font-weight: 700;
+  font-size: 24px;
+  padding: 0px 30px;
+}
+.reservation p {
+  color: #353535;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0%;
+}
+.reservation .button-gradiant {
+  color: #FFFFFF;
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 90%);
+  font-size: 16px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid #9747FF;
+  align-content: center;
+  width: 218px;
+  margin: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.reservation .button-gradiant:hover {
+  cursor: pointer;
+}
+
+.fonctionnement {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.fonctionnement h2 {
+  font-size: 24px;
+  padding: 20px 0px 15px 0px;
+}
+.fonctionnement .choix {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  border-radius: 20px;
+  margin-left: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  justify-content: flex-start;
+  background-color: #F6F6F6;
+  align-items: center;
+  padding: 30px 40px;
+}
+.fonctionnement .choix p {
+  color: white;
+  background-color: #9356DC;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+}
+.fonctionnement .choix i {
+  color: #7E7E7E;
+  font-size: 16px;
+}
+.fonctionnement .choix #purple {
+  color: #9356DC;
+}
+.fonctionnement .choix h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.liste-restaurant {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #F6F6F6;
+}
+.liste-restaurant h2 {
+  font-size: 24px;
+  padding: 20px 0px 15px 0px;
+}
+.liste-restaurant .restaurant {
+  height: 250px;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.liste-restaurant .restaurant img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+  overflow: auto;
+}
+.liste-restaurant .restaurant .banniere-sous-restaurant {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 13px;
+}
+.liste-restaurant .restaurant .banniere-sous-restaurant #like {
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 90%);
+}
+.liste-restaurant .restaurant .banniere-sous-restaurant i {
+  font-size: 22px;
+  align-content: center;
+  padding-right: 10px;
+}
+.liste-restaurant .restaurant .banniere-sous-restaurant .restaurant-desc {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  gap: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

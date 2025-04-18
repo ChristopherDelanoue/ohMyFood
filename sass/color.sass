@@ -8,3 +8,37 @@ $lightGreen: #99E2D0
 $blue: #003A68
 $lightBlue:#89C8FA
 $darkGrey: #353535
+$iconGrey: #7E7E7E
+
+$shadow: 0px 4px 10px rgba(0, 0, 0, 0.25)
+$lightShadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
+$veryLightShadow: 0px 4px 15px rgba(0, 0, 0, 0.10)
+$gradiant: linear-gradient(180deg,rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 90%)
+
+@mixin gradiant
+    color: #FFFFFF;
+    background: linear-gradient(180deg,rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 90%);
+    font-size: 16px
+    height: 50px
+    border-radius: 50px
+    border: 1px solid #9747FF
+    align-content: center
+    width: 218px
+    margin: auto
+
+@mixin h3-conf
+    font-size: 16px
+    font-weight: 500
+
+@mixin h2-conf
+    font-size: 24px
+    padding: 20px 0px 15px 0px
+
+@mixin section
+    padding-top: 40px
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding: 20px
+
+    
