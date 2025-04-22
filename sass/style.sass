@@ -56,7 +56,6 @@ header
     @include color.section
     h2
         @include color.h2-conf
-
     .choix
         display: flex
         flex-direction: row
@@ -98,26 +97,54 @@ header
         background-color: #fff
         box-shadow: color.$veryLightShadow
         border-radius: 15px
+        position: relative
         img
             height: 70%
             width: 100%
             object-fit: cover
             overflow: auto
+        .nouveau
+            display: inline-flex
+            position: absolute
+            top: 15px
+            right: 15px
+            background-color: color.$lightGreen
+            color: color.$green
+            padding: 5px 10px
         .banniere-sous-restaurant
             display: flex
             flex-direction: row
             justify-content: space-between
             padding: 13px
             #like
-               background: color.$gradiant
-               
+               background: color.$gradiant  
             i
                 font-size: 22px
                 align-content: center
+                align-items: center
                 padding-right: 10px
             .restaurant-desc
                 display: flex
                 flex-direction: column
                 align-content: space-around
                 gap: 5px
-        
+footer
+    background-color: color.$darkGrey
+    @include color.section
+    color: #fff
+    padding-top: 16px
+    h2
+        font-family: 'Shrikhand', 'Times New Roman', Times, serif
+        padding-top: 16px 
+    section
+        display: flex
+        flex-direction: column
+        gap: 7px
+        a
+            display: flex
+            gap: 15px
+            align-items: center
+            align-content: center
+            p
+                font-weight: 500
+                font-family: 'Roboto', sans-serif
