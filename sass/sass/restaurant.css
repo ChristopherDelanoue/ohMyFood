@@ -1,0 +1,19 @@
+header nav {
+  color: #353535;
+  display: flex;
+  width: 100vw;
+}
+header nav i {
+  height: 30px;
+  width: 30px;
+}
+header nav img {
+  height: 44px;
+  width: 162px;
+}
+header img {
+  height: 275px;
+  object-fit: contain;
+}
+
+/*# sourceMappingURL=restaurant.css.map */
