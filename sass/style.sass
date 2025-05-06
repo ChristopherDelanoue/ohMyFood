@@ -1,5 +1,5 @@
-@use '../sass/responsive' as responsive;
-@use '../sass/color' as color;
+@use '../sass/responsive' as responsive
+@use '../sass/color' as color
 
 *
     margin: 0px
@@ -45,7 +45,6 @@ header
         color: color.$darkGrey
         font-weight: 300
         font-size: 18px
-        letter-spacing: 0%
     .button-gradiant
         @include color.gradiant
         box-shadow: color.$shadow
@@ -105,6 +104,7 @@ header
             width: 100%
             object-fit: cover
             overflow: auto
+            border-radius: 15px 15px 0px 0px
         .nouveau
             display: inline-flex
             position: absolute
@@ -119,12 +119,13 @@ header
             justify-content: space-between
             padding: 13px
             #like
-               background: color.$gradiant  
-            i
-                font-size: 22px
-                align-content: center
-                align-items: center
-                padding-right: 10px
+               background: color.$gradiant
+            .like
+                width: 22px
+                height: 22px
+                display: flex
+                &:hover path
+                    fill: blue
             .restaurant-desc
                 display: flex
                 flex-direction: column

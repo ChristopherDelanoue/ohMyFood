@@ -1,18 +1,94 @@
 @use '../sass/responsive' as responsive;
 @use '../sass/color' as color;
 
-header
-    nav
-        color: color.$darkGrey
-        display: flex
-        width: 100vw
+body
+    margin: 0px
+nav
+    color: color.$darkGrey
+    width: 100vw
+    display: flex
+    flex-direction: column
+    position: relative
+    background-color: color.$lightGrey
+    header
+        padding: 10px 20px
+        display: inline
+        flex-direction: row
         i
             height: 30px
             width: 30px
+        .logo
+            height: 30px
+            justify-content: center
+    .cover-restaurant
+        width: 100vw
+        height: 30vh
+        object-fit: cover
+
+main
+    background-color: color.$lightGrey
+    border-top-right-radius: 25px
+    border-top-left-radius: 25px
+    transform: translateY(-40px)
+    .title
+        display: flex
+        flex-direction: row
+        padding: 0px 17px
+        align-items: center
+        justify-content: space-between
+        h1
+            font-family: 'Shrikhand', 'Times New Roman', Times, serif
+            font-weight: 400
+            font-style: italic
+            font-size: 28px
+            color: color.$black
         img
-            height: 44px
-            width: 162px
-    img
-        height: 275px
-        object-fit: contain
+            height: 22px
+            width: 22px
+main
+    padding: 0px 20px
+    .entrees-restaurant
+        h2
+            font-family: 'roboto', sans-serif
+            font-weight: 300
+            font-size: 16px
+        .souligne
+            @include color.soulignage
+        .plat
+            display: flex
+            flex-direction: row
+            background-color: #fff
+            border-radius: 20px
+            overflow: hidden
+            box-shadow: color.$veryLightShadow
+            justify-content: space-between
+            align-items: flex-end
+            .desc
+                display: flex
+                flex-direction: column
+                h3
+                    font-family: 'roboto', sans-serif
+                    font-weight: 500
+                    font-size: 18px
+                p
+                    font-family: 'roboto', sans-serif
+                    font-weight: 300
+                    font-size: 15px
+            .prix
+                h3
+                    font-family: 'roboto', sans-serif
+                    font-weight: 700
+                    font-size: 15px
+                    
+            .like
+                display: flex
+                justify-content: center
+                color: #fff
+                background-color: color.$lightGreen
+                height: 100%
+                width: 15%
+                align-items: center
+
+
+        
 
