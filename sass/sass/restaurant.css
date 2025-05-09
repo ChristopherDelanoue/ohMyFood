@@ -57,17 +57,17 @@ main .title img {
 main {
   padding: 0px 20px;
 }
-main .entrees-restaurant h2 {
+main .class-menu h2 {
   font-family: "roboto", sans-serif;
   font-weight: 300;
   font-size: 16px;
 }
-main .entrees-restaurant .souligne {
+main .class-menu .souligne {
   width: 40px;
   height: 6px;
   background-color: #99E2D0;
 }
-main .entrees-restaurant .plat {
+main .class-menu .plat {
   display: flex;
   flex-direction: row;
   background-color: #fff;
@@ -78,32 +78,32 @@ main .entrees-restaurant .plat {
   align-items: flex-end;
   margin: 10px 0px;
 }
-main .entrees-restaurant .plat .desc {
+main .class-menu .plat .desc {
   display: flex;
   flex-direction: column;
 }
-main .entrees-restaurant .plat .desc h3 {
+main .class-menu .plat .desc h3 {
   margin: 0;
   padding: 10px 0px 10px 10px;
   font-family: "roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
 }
-main .entrees-restaurant .plat .desc p {
+main .class-menu .plat .desc p {
   margin: 0;
   padding: 10px 0px 10px 10px;
   font-family: "roboto", sans-serif;
   font-weight: 300;
   font-size: 15px;
 }
-main .entrees-restaurant .plat .prix h3 {
+main .class-menu .plat .prix h3 {
   margin: 0;
   padding: 0px 10px 10px 0px;
   font-family: "roboto", sans-serif;
   font-weight: 700;
   font-size: 15px;
 }
-main .entrees-restaurant .plat .like {
+main .class-menu .plat .like {
   display: flex;
   position: relative;
   justify-content: center;
