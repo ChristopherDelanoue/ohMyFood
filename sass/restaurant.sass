@@ -79,6 +79,8 @@ main
                 align-items: flex-end
                 justify-content: space-between
                 width: 100%
+                &:hover + .like
+                    width: 15%
                 .desc
                     display: flex
                     flex-direction: column
@@ -88,12 +90,16 @@ main
                         font-family: 'roboto', sans-serif
                         font-weight: 500
                         font-size: 18px
+                        text-overflow: fade
+                        white-space: nowrap
                     p
                         margin: 0
                         padding: 10px 0px 10px 10px
                         font-family: 'roboto', sans-serif
                         font-weight: 300
                         font-size: 15px
+                        text-overflow: fade
+                        white-space: nowrap
                 .prix
                     h3
                         margin: 0
@@ -110,6 +116,8 @@ main
                 width: 0%
                 justify-content: center
                 align-self: stretch
+                transition: width 0.4s ease-in-out
+
 .div-commande
     display: flex
     padding: 20px 0px
@@ -142,5 +150,10 @@ footer
                 font-weight: 500
                 font-family: 'Roboto', sans-serif
 
-        
+
+@keyframes like-anim
+    0%
+        width: 0%
+    100%
+        width: 15%
 

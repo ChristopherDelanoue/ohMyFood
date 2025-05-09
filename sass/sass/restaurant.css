@@ -99,6 +99,9 @@ main .class-menu .plat .space-between {
   justify-content: space-between;
   width: 100%;
 }
+main .class-menu .plat .space-between:hover + .like {
+  width: 15%;
+}
 main .class-menu .plat .space-between .desc {
   display: flex;
   flex-direction: column;
@@ -109,6 +112,8 @@ main .class-menu .plat .space-between .desc h3 {
   font-family: "roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
+  text-overflow: fade;
+  white-space: nowrap;
 }
 main .class-menu .plat .space-between .desc p {
   margin: 0;
@@ -116,6 +121,8 @@ main .class-menu .plat .space-between .desc p {
   font-family: "roboto", sans-serif;
   font-weight: 300;
   font-size: 15px;
+  text-overflow: fade;
+  white-space: nowrap;
 }
 main .class-menu .plat .space-between .prix h3 {
   margin: 0;
@@ -133,6 +140,7 @@ main .class-menu .plat .like {
   width: 0%;
   justify-content: center;
   align-self: stretch;
+  transition: width 0.4s ease-in-out;
 }
 
 .div-commande {
@@ -187,6 +195,15 @@ footer section a i {
 footer section a p {
   font-weight: 500;
   font-family: "Roboto", sans-serif;
+}
+
+@keyframes like-anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 15%;
+  }
 }
 
 /*# sourceMappingURL=restaurant.css.map */
