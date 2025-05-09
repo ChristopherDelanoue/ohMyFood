@@ -1,8 +1,10 @@
-@use '../sass/responsive' as responsive;
-@use '../sass/color' as color;
+@use '../sass/responsive' as responsive
+@use '../sass/color' as color
 
-body
+*
     margin: 0px
+body
+    background-color: color.$lightGrey
 nav
     color: color.$darkGrey
     width: 100vw
@@ -11,14 +13,20 @@ nav
     position: relative
     background-color: color.$lightGrey
     header
-        padding: 10px 20px
-        display: inline
+        padding: 10px
+        display: flex
         flex-direction: row
         i
+            align-content: center
             height: 30px
             width: 30px
+            color: color.$darkGrey
+            font-size: 18px
+            transform: translateX(20px)
         .logo
             height: 30px
+            display: flex
+            margin: auto
             justify-content: center
     .cover-restaurant
         width: 100vw
@@ -26,6 +34,8 @@ nav
         object-fit: cover
 
 main
+    display: flex
+    flex-direction: column
     background-color: color.$lightGrey
     border-top-right-radius: 25px
     border-top-left-radius: 25px
@@ -33,7 +43,7 @@ main
     .title
         display: flex
         flex-direction: row
-        padding: 0px 17px
+        padding: 20px 0px 20px 0px
         align-items: center
         justify-content: space-between
         h1
@@ -46,12 +56,14 @@ main
             height: 22px
             width: 22px
 main
-    padding: 0px 20px
+    padding: 5px 20px 0px 20px
     .class-menu
         h2
             @include color.h2-carte
+            padding: 20px 0px 0px 0px
         .souligne
             @include color.soulignage
+            margin-bottom: 10px
         .plat
             display: flex
             flex-direction: row
@@ -96,7 +108,37 @@ main
                 width: 15%
                 align-items: center
                 align-self: stretch
-
+.div-commande
+    display: flex
+    padding: 20px 0px
+    transform: translateY(20px)
+    .button-gradiant
+        @include color.gradiant
+        box-shadow: color.$shadow
+        &:hover
+            cursor: pointer
+footer
+    background-color: color.$darkGrey
+    @include color.section
+    color: #fff
+    padding-top: 16px
+    h2
+        font-family: 'Shrikhand', 'Times New Roman', Times, serif
+        padding-top: 16px
+    section
+        display: flex
+        flex-direction: column
+        gap: 7px
+        a
+            display: flex
+            gap: 15px
+            align-items: center
+            align-content: center
+            i
+                width: 18px
+            p
+                font-weight: 500
+                font-family: 'Roboto', sans-serif
 
         
 
