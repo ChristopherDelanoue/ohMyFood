@@ -89,29 +89,35 @@ main .class-menu .plat {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  justify-content: space-between;
   align-items: flex-end;
   margin: 10px 0px;
 }
-main .class-menu .plat .desc {
+main .class-menu .plat .space-between {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+main .class-menu .plat .space-between .desc {
   display: flex;
   flex-direction: column;
 }
-main .class-menu .plat .desc h3 {
+main .class-menu .plat .space-between .desc h3 {
   margin: 0;
   padding: 10px 0px 10px 10px;
   font-family: "roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
 }
-main .class-menu .plat .desc p {
+main .class-menu .plat .space-between .desc p {
   margin: 0;
   padding: 10px 0px 10px 10px;
   font-family: "roboto", sans-serif;
   font-weight: 300;
   font-size: 15px;
 }
-main .class-menu .plat .prix h3 {
+main .class-menu .plat .space-between .prix h3 {
   margin: 0;
   padding: 0px 10px 10px 0px;
   font-family: "roboto", sans-serif;
@@ -121,11 +127,11 @@ main .class-menu .plat .prix h3 {
 main .class-menu .plat .like {
   display: flex;
   position: relative;
-  justify-content: center;
+  align-items: center;
   color: #fff;
   background-color: #99E2D0;
   width: 15%;
-  align-items: center;
+  justify-content: center;
   align-self: stretch;
 }
 

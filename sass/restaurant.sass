@@ -71,42 +71,45 @@ main
             border-radius: 20px
             overflow: hidden
             box-shadow: color.$veryLightShadow
-            justify-content: space-between
             align-items: flex-end
             margin: 10px 0px
-
-            .desc
+            .space-between
                 display: flex
-                flex-direction: column
-                h3
-                    margin: 0
-                    padding: 10px 0px 10px 10px
-                    font-family: 'roboto', sans-serif
-                    font-weight: 500
-                    font-size: 18px
-                p
-                    margin: 0
-                    padding: 10px 0px 10px 10px
-                    font-family: 'roboto', sans-serif
-                    font-weight: 300
-                    font-size: 15px
+                flex-direction: row
+                align-items: flex-end
+                justify-content: space-between
+                width: 100%
+                .desc
+                    display: flex
+                    flex-direction: column
+                    h3
+                        margin: 0
+                        padding: 10px 0px 10px 10px
+                        font-family: 'roboto', sans-serif
+                        font-weight: 500
+                        font-size: 18px
+                    p
+                        margin: 0
+                        padding: 10px 0px 10px 10px
+                        font-family: 'roboto', sans-serif
+                        font-weight: 300
+                        font-size: 15px
+                .prix
+                    h3
+                        margin: 0
+                        padding: 0px 10px 10px 0px
+                        font-family: 'roboto', sans-serif
+                        font-weight: 700
+                        font-size: 15px
 
-            .prix
-                h3
-                    margin: 0
-                    padding: 0px 10px 10px 0px
-                    font-family: 'roboto', sans-serif
-                    font-weight: 700
-                    font-size: 15px
-                    
             .like
                 display: flex
                 position: relative
-                justify-content: center
+                align-items: center
                 color: #fff
                 background-color: color.$lightGreen
                 width: 15%
-                align-items: center
+                justify-content: center
                 align-self: stretch
 .div-commande
     display: flex

@@ -200,6 +200,9 @@ footer section a {
   align-items: center;
   align-content: center;
 }
+footer section a i {
+  width: 18px;
+}
 footer section a p {
   font-weight: 500;
   font-family: "Roboto", sans-serif;
