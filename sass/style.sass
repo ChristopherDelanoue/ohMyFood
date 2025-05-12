@@ -53,6 +53,12 @@ header
 
 .fonctionnement 
     @include color.section
+    @media screen and (min-width: 1000px)
+        max-width: 1080px
+        margin: auto
+        width: 100%
+        margin: 0px auto
+        padding: 20px 0px
     h2
         @include color.h2-conf
     .containeur-fonctionnement
@@ -77,6 +83,7 @@ header
             @media screen and (min-width: 1000px)
                 width: calc(33% - 20px)
                 max-width: 400px
+                margin-left: 0px
             p
                 color: white
                 background-color: color.$purple
@@ -105,78 +112,109 @@ header
 .liste-restaurant
     @include color.section
     background-color: color.$lightGrey
-    h2
-        @include color.h2-conf
-    .container-liste-restaurant
+    .container-restaurant
         display: flex
         flex-direction: column
-        width: 100%
         @media screen and (min-width: 1000px)
-            display: grid
-            grid-template-columns: repeat(2, 1fr)
-            grid-template-rows: repeat(2, 1fr)
-            gap: 20px 50px
+            width: 100%
             max-width: 1080px
             margin: auto
-        .restaurant
-            height: 250px
-            background-color: #fff
-            box-shadow: color.$veryLightShadow
-            border-radius: 15px
-            position: relative
-            text-decoration: none
-            color: #000
-            img
-                height: 70%
-                width: 100%
-                object-fit: cover
-                overflow: auto
-                border-radius: 15px 15px 0px 0px
-            .nouveau
-                display: inline-flex
-                position: absolute
-                top: 15px
-                right: 15px
-                background-color: color.$lightGreen
-                color: color.$green
-                padding: 5px 10px
-            .banniere-sous-restaurant
-                display: flex
-                flex-direction: row
-                justify-content: space-between
-                padding: 13px
-                #like
-                   background: color.$gradiant
-                .like
-                    width: 22px
-                    height: 22px
+        h2
+            @include color.h2-conf
+        .container-liste-restaurant
+            display: flex
+            flex-direction: column
+            gap: 20px
+            width: 100%
+            @media screen and (min-width: 1000px)
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+                grid-template-rows: repeat(2, 1fr)
+                gap: 20px 50px
+                max-width: 1080px
+                margin: auto
+            .restaurant
+                height: 250px
+                background-color: #fff
+                box-shadow: color.$veryLightShadow
+                border-radius: 15px
+                position: relative
+                text-decoration: none
+                color: #000
+                img
+                    height: 70%
+                    width: 100%
+                    object-fit: cover
+                    overflow: auto
+                    border-radius: 15px 15px 0px 0px
+                .nouveau
+                    display: inline-flex
+                    position: absolute
+                    top: 15px
+                    right: 15px
+                    background-color: color.$lightGreen
+                    color: color.$green
+                    padding: 5px 10px
+                .banniere-sous-restaurant
                     display: flex
-                    &:hover path
-                        fill: color.$gradiant
-                .restaurant-desc
-                    display: flex
-                    flex-direction: column
-                    align-content: space-around
-                    gap: 5px
+                    flex-direction: row
+                    justify-content: space-between
+                    padding: 13px
+                    #like
+                       background: color.$gradiant
+                    .like
+                        width: 22px
+                        height: 22px
+                        display: flex
+                        &:hover path
+                            fill: color.$gradiant
+                    .restaurant-desc
+                        display: flex
+                        flex-direction: column
+                        align-content: space-around
+                        gap: 5px
 footer
     background-color: color.$darkGrey
     @include color.section
     color: #fff
     padding-top: 16px
+    @media screen and (min-width: 1000px)
+        display: flex
+        flex-direction: row-reverse
+        padding-top: 40px
+        padding-bottom: 30px
     h2
         font-family: 'Shrikhand', 'Times New Roman', Times, serif
-        padding-top: 16px 
+        padding-top: 16px
+        @media screen and (min-width: 1000px)
+            padding-top: 0px
+            padding-left: 20px
     section
         display: flex
         flex-direction: column
         gap: 7px
-        a
+        @media screen and (min-width: 1000px)
+            flex-direction: row
+            gap: 40px
+        .groupe-lien
             display: flex
-            gap: 15px
-            align-items: center
-            align-content: center
-            i
-                width: 18px
-            p
-                font-weight: 500
-                font-family: 'Roboto', sans-serif
+            flex-direction: column
+            @media screen and (min-width: 1000px)
+                flex-direction: row
+            a
+                display: flex
+                align-items: center
+                align-content: center
+                gap: 5px
+                @media screen and (min-width: 1000px)
+                    gap: 0px
+                i
+                    width: 18px
+                    @media screen and (min-width: 1000px)
+                        padding-left: 10px
+                p
+                    font-weight: 500
+                    font-size: 16px
+                    font-family: 'Roboto', sans-serif
+                    @media screen and (min-width: 1000px)
+                        padding-left: 10px
