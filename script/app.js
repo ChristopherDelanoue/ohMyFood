@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    //slide vers le bas au retour
     const backToHomeLink = document.querySelector('.back-to-home');
-
     if (backToHomeLink) {
         backToHomeLink.addEventListener('click', function(event) {
             event.preventDefault(); // Empêche la navigation immédiate
@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 300); // 1000ms correspond à la durée de la transition CSS
         });
     }
+    // validation des plats
     const plats = document.querySelectorAll('.plat');
-
     plats.forEach(plat => {
         plat.addEventListener('click', function() {
             const like = this.querySelector('.like');
