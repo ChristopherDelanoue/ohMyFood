@@ -170,14 +170,18 @@ header
                     flex-direction: row
                     justify-content: space-between
                     padding: 13px
-                    #like
-                       background: color.$gradiant
                     .like
-                        width: 22px
-                        height: 22px
+                        width: 24px
+                        height: 24px
                         display: flex
-                        &:hover path
-                            fill: color.$gradiant
+                    .like path
+                        fill: white
+                        stroke: black
+                        stroke-width: 1px
+                        transition: fill .2s ease
+                    .like:hover path
+                        fill: url(#likeGradientHover)
+                        stroke-width: 0
                     .restaurant-desc
                         display: flex
                         flex-direction: column

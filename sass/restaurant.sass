@@ -61,19 +61,26 @@ main
             justify-content: space-between
             @media screen and (min-width: 1000px)
                 justify-content: center
-        h1
-            font-family: 'Shrikhand', 'Times New Roman', Times, serif
-            font-weight: 400
-            font-style: italic
-            font-size: 28px
-            color: color.$black
-            @media screen and (min-width: 1000px)
-                padding-right: 10px
-        img
-            height: 22px
-            width: 22px
-            @media screen and (min-width: 1000px)
-                padding-left: 10px
+            h1
+                font-family: 'Shrikhand', 'Times New Roman', Times, serif
+                font-weight: 400
+                font-style: italic
+                font-size: 28px
+                color: color.$black
+                @media screen and (min-width: 1000px)
+                    padding-right: 10px
+            .like
+                width: 24px
+                height: 24px
+                display: flex
+            .like path
+                fill: white
+                stroke: black
+                stroke-width: 1px
+                transition: fill .2s ease
+            .like:hover path
+                fill: url(#likeGradientHover)
+                stroke-width: 0
     .class-menu
         h2
             @include color.h2-carte
@@ -109,10 +116,11 @@ main
                 .desc
                     display: flex
                     flex-direction: column
-                    flex-grow: 1
                     text-overflow: ellipsis
                     overflow: hidden
                     white-space: nowrap
+                    &:hover
+                        padding-right: 20px
                     h3
                         margin: 0
                         padding: 10px 0px 3px 10px
@@ -130,14 +138,17 @@ main
                         font-size: 15px
                         text-overflow: ellipsis
                         overflow: hidden
+
                 .prix
                     h3
                         margin: 0
-                        padding: 0px 10px 10px 15px
+                        padding: 0px 10px 10px 0px
                         font-family: 'roboto', sans-serif
                         font-weight: 700
                         font-size: 15px
                         white-space: nowrap
+
+
             .like
                 display: flex
                 position: relative

@@ -79,7 +79,7 @@ main .conteneur-menu .title {
     justify-content: center;
   }
 }
-main .conteneur-menu h1 {
+main .conteneur-menu .title h1 {
   font-family: "Shrikhand", "Times New Roman", Times, serif;
   font-weight: 400;
   font-style: italic;
@@ -87,18 +87,24 @@ main .conteneur-menu h1 {
   color: #101010;
 }
 @media screen and (min-width: 1000px) {
-  main .conteneur-menu h1 {
+  main .conteneur-menu .title h1 {
     padding-right: 10px;
   }
 }
-main .conteneur-menu img {
-  height: 22px;
-  width: 22px;
+main .conteneur-menu .title .like {
+  width: 24px;
+  height: 24px;
+  display: flex;
 }
-@media screen and (min-width: 1000px) {
-  main .conteneur-menu img {
-    padding-left: 10px;
-  }
+main .conteneur-menu .title .like path {
+  fill: white;
+  stroke: black;
+  stroke-width: 1px;
+  transition: fill 0.2s ease;
+}
+main .conteneur-menu .title .like:hover path {
+  fill: url(#likeGradientHover);
+  stroke-width: 0;
 }
 main .class-menu h2 {
   font-family: "roboto", sans-serif;
@@ -151,10 +157,12 @@ main .class-menu .plat .space-between:hover + .like {
 main .class-menu .plat .space-between .desc {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+main .class-menu .plat .space-between .desc:hover {
+  padding-right: 20px;
 }
 main .class-menu .plat .space-between .desc h3 {
   margin: 0;
@@ -177,7 +185,7 @@ main .class-menu .plat .space-between .desc p {
 }
 main .class-menu .plat .space-between .prix h3 {
   margin: 0;
-  padding: 0px 10px 10px 15px;
+  padding: 0px 10px 10px 0px;
   font-family: "roboto", sans-serif;
   font-weight: 700;
   font-size: 15px;
