@@ -96,18 +96,31 @@ main
                 align-items: flex-end
                 justify-content: space-between
                 width: 100%
+                &:hover
+                    width: 85%
+                    transition: width 0.4s ease-in-out
+                    transform-origin: right
+                    @media screen and (min-width: 1000px)
+                        width: 100%
                 &:hover + .like
                     width: 15%
+                    @media screen and (min-width: 1000px)
+                        width: 65px
                 .desc
                     display: flex
                     flex-direction: column
+                    flex-grow: 1
+                    text-overflow: ellipsis
+                    overflow: hidden
+                    white-space: nowrap
                     h3
                         margin: 0
                         padding: 10px 0px 3px 10px
                         font-family: 'roboto', sans-serif
                         font-weight: 500
                         font-size: 18px
-                        text-overflow: fade
+                        text-overflow: ellipsis
+                        overflow: hidden
                         white-space: nowrap
                     p
                         margin: 0
@@ -115,15 +128,16 @@ main
                         font-family: 'roboto', sans-serif
                         font-weight: 300
                         font-size: 15px
-                        text-overflow: fade
-                        white-space: nowrap
+                        text-overflow: ellipsis
+                        overflow: hidden
                 .prix
                     h3
                         margin: 0
-                        padding: 0px 10px 10px 0px
+                        padding: 0px 10px 10px 15px
                         font-family: 'roboto', sans-serif
                         font-weight: 700
                         font-size: 15px
+                        white-space: nowrap
             .like
                 display: flex
                 position: relative
@@ -134,6 +148,7 @@ main
                 justify-content: center
                 align-self: stretch
                 transition: width 0.4s ease-in-out
+                overflow: hidden
 
 .div-commande
     display: flex

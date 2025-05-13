@@ -130,12 +130,31 @@ main .class-menu .plat .space-between {
   justify-content: space-between;
   width: 100%;
 }
+main .class-menu .plat .space-between:hover {
+  width: 85%;
+  transition: width 0.4s ease-in-out;
+  transform-origin: right;
+}
+@media screen and (min-width: 1000px) {
+  main .class-menu .plat .space-between:hover {
+    width: 100%;
+  }
+}
 main .class-menu .plat .space-between:hover + .like {
   width: 15%;
+}
+@media screen and (min-width: 1000px) {
+  main .class-menu .plat .space-between:hover + .like {
+    width: 65px;
+  }
 }
 main .class-menu .plat .space-between .desc {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 main .class-menu .plat .space-between .desc h3 {
   margin: 0;
@@ -143,7 +162,8 @@ main .class-menu .plat .space-between .desc h3 {
   font-family: "roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  text-overflow: fade;
+  text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
 }
 main .class-menu .plat .space-between .desc p {
@@ -152,15 +172,16 @@ main .class-menu .plat .space-between .desc p {
   font-family: "roboto", sans-serif;
   font-weight: 300;
   font-size: 15px;
-  text-overflow: fade;
-  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 main .class-menu .plat .space-between .prix h3 {
   margin: 0;
-  padding: 0px 10px 10px 0px;
+  padding: 0px 10px 10px 15px;
   font-family: "roboto", sans-serif;
   font-weight: 700;
   font-size: 15px;
+  white-space: nowrap;
 }
 main .class-menu .plat .like {
   display: flex;
@@ -172,6 +193,7 @@ main .class-menu .plat .like {
   justify-content: center;
   align-self: stretch;
   transition: width 0.4s ease-in-out;
+  overflow: hidden;
 }
 
 .div-commande {
