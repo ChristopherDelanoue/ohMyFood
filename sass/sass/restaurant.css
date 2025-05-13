@@ -1,9 +1,12 @@
 * {
-  margin: 0px;
+  margin: 0;
 }
 
 body {
   background-color: #FFF;
+  transition: all 0.5s ease;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 nav {
@@ -40,7 +43,7 @@ nav .cover-restaurant {
   width: 100vw;
   height: 40vh;
   object-fit: cover;
-  margin: 0px 0px -40px 0px;
+  margin: 0 0 -40px 0;
 }
 
 main {
@@ -70,7 +73,7 @@ main .conteneur-menu {
 main .conteneur-menu .title {
   display: flex;
   flex-direction: row;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0 20px 0;
   align-items: center;
   justify-content: space-between;
 }
@@ -91,18 +94,18 @@ main .conteneur-menu .title h1 {
     padding-right: 10px;
   }
 }
-main .conteneur-menu .title .like {
+main .conteneur-menu .title .coeur {
   width: 24px;
   height: 24px;
   display: flex;
 }
-main .conteneur-menu .title .like path {
+main .conteneur-menu .title .coeur path {
   fill: white;
   stroke: black;
   stroke-width: 1px;
   transition: fill 0.2s ease;
 }
-main .conteneur-menu .title .like:hover path {
+main .conteneur-menu .title .coeur:hover path {
   fill: url(#likeGradientHover);
   stroke-width: 0;
 }
@@ -111,7 +114,7 @@ main .class-menu h2 {
   font-weight: 300;
   font-size: 16px;
   margin-bottom: 5px;
-  padding: 20px 0px 0px 0px;
+  padding: 20px 0 0 0;
 }
 main .class-menu .souligne {
   width: 40px;
@@ -127,7 +130,7 @@ main .class-menu .plat {
   overflow: hidden;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   align-items: flex-end;
-  margin: 10px 0px;
+  margin: 10px 0;
 }
 main .class-menu .plat .space-between {
   display: flex;
@@ -146,14 +149,6 @@ main .class-menu .plat .space-between:hover {
     width: 100%;
   }
 }
-main .class-menu .plat .space-between:hover + .like {
-  width: 15%;
-}
-@media screen and (min-width: 1000px) {
-  main .class-menu .plat .space-between:hover + .like {
-    width: 65px;
-  }
-}
 main .class-menu .plat .space-between .desc {
   display: flex;
   flex-direction: column;
@@ -166,7 +161,7 @@ main .class-menu .plat .space-between .desc:hover {
 }
 main .class-menu .plat .space-between .desc h3 {
   margin: 0;
-  padding: 10px 0px 3px 10px;
+  padding: 10px 0 3px 10px;
   font-family: "roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -176,7 +171,7 @@ main .class-menu .plat .space-between .desc h3 {
 }
 main .class-menu .plat .space-between .desc p {
   margin: 0;
-  padding: 3px 0px 10px 10px;
+  padding: 3px 0 10px 10px;
   font-family: "roboto", sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -185,7 +180,7 @@ main .class-menu .plat .space-between .desc p {
 }
 main .class-menu .plat .space-between .prix h3 {
   margin: 0;
-  padding: 0px 10px 10px 0px;
+  padding: 0 10px 10px 0;
   font-family: "roboto", sans-serif;
   font-weight: 700;
   font-size: 15px;
@@ -197,16 +192,16 @@ main .class-menu .plat .like {
   align-items: center;
   color: #fff;
   background-color: #99E2D0;
-  width: 0%;
+  width: 0;
   justify-content: center;
   align-self: stretch;
-  transition: width 0.4s ease-in-out;
   overflow: hidden;
+  transition: width 0.4s ease-in-out;
 }
 
 .div-commande {
   display: flex;
-  padding: 0px 0px 30px 0px;
+  padding: 0 0 30px 0;
   transform: translateY(20px);
 }
 .div-commande .button-gradiant {
@@ -249,7 +244,7 @@ footer h2 {
 }
 @media screen and (min-width: 1000px) {
   footer h2 {
-    padding-top: 0px;
+    padding-top: 0;
     padding-left: 20px;
   }
 }
@@ -282,7 +277,7 @@ footer section .groupe-lien a {
 }
 @media screen and (min-width: 1000px) {
   footer section .groupe-lien a {
-    gap: 0px;
+    gap: 0;
   }
 }
 footer section .groupe-lien a i {
@@ -305,13 +300,53 @@ footer section .groupe-lien a p {
   }
 }
 
+@keyframes slide-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(10vh);
+    opacity: 0.5;
+  }
+  70% {
+    transform: translateY(50vh);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
 @keyframes like-anim {
   0% {
-    width: 0%;
+    width: 0;
+    max-width: 65px;
   }
   100% {
     width: 15%;
+    max-width: 65px;
   }
+}
+@keyframes like-retour {
+  0% {
+    width: 15%;
+    max-width: 65px;
+  }
+  100% {
+    width: 0;
+  }
+}
+.slide {
+  animation: slide-out 0.3s linear both;
+}
+
+.liked {
+  animation: like-anim 0.2s linear both;
+}
+
+.like-retour {
+  animation: like-retour 0.2s linear both;
 }
 
 /*# sourceMappingURL=restaurant.css.map */
