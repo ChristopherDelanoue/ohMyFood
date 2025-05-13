@@ -237,6 +237,7 @@ footer section {
 footer section .groupe-lien {
   display: flex;
   flex-direction: column;
+  gap: 7px;
 }
 @media screen and (min-width: 1000px) {
   footer section .groupe-lien {
@@ -256,6 +257,7 @@ footer section .groupe-lien a {
 }
 footer section .groupe-lien a i {
   width: 18px;
+  padding-right: 3px;
 }
 @media screen and (min-width: 1000px) {
   footer section .groupe-lien a i {
