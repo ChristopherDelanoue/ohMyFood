@@ -15,7 +15,7 @@ nav {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #F6F6F6;
+  background-color: #FFFFFF;
 }
 nav header {
   padding: 10px;
@@ -308,7 +308,7 @@ footer section .groupe-lien a p {
 }
 @keyframes slide-in {
   0% {
-    transform: translateY(100vh);
+    transform: translateY(80vh);
     opacity: 0;
   }
   100% {
