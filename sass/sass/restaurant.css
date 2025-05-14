@@ -13,10 +13,6 @@ body {
   transform: translateY(0vh);
 }
 
-.return {
-  transform: translateY(100vh);
-}
-
 nav {
   color: #353535;
   width: 100vw;
