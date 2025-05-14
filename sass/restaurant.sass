@@ -5,12 +5,9 @@
     margin: 0
 body
     transform: translateY(100vh)
+    opacity: 0
     background-color: #FFF
-    transition: transform 0.3s ease
-    opacity: 1
-
-.loaded
-    transform: translateY(0vh)
+    animation: slide-in 0.3s ease both
 
 nav
     color: color.$darkGrey
@@ -117,8 +114,6 @@ main
                     text-overflow: ellipsis
                     overflow: hidden
                     white-space: nowrap
-                    &:hover
-                        padding-right: 20px
                     h3
                         margin: 0
                         padding: 10px 0 3px 10px
@@ -140,7 +135,7 @@ main
                 .prix
                     h3
                         margin: 0
-                        padding: 0 10px 10px 0
+                        padding: 0 10px 10px 3px
                         font-family: 'roboto', sans-serif
                         font-weight: 700
                         font-size: 15px
@@ -229,6 +224,14 @@ footer
         transform: translateY(100vh)
         opacity: 0
 
+@keyframes slide-in
+    0%
+        transform: translateY(100vh)
+        opacity: 0
+    100%
+        transform: translateY(0vh)
+        opacity: 1
+
 
 @keyframes like-anim
     0%
@@ -249,7 +252,7 @@ footer
     animation: slide-out .3s linear both
 
 .slide-in
-    animation: slide-up 3s linear both
+    animation: slide-up 0.3s linear both
 
 .liked
     animation: like-anim .2s linear both

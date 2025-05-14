@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); // Empêche la navigation immédiate
 
             // Ajoute la classe pour déclencher l'animation de slide vers le bas
+            document.body.classList.remove('loaded')
             document.body.classList.add('slide');
+
 
             // Redirige vers la page d'accueil après la durée de la transition (1s)
             setTimeout(function() {
@@ -28,9 +30,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.body.classList.add('loaded');
-});
