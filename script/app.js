@@ -29,3 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('loaded');
+});
+
+const back = document.querySelector('.back-to-home')
+document.addEventListener("DOMContentLoaded", function () {
+    back.addEventListener("click", function () {
+        if(document.body.classList.contains('loaded')) {
+            document.body.classList.remove('loaded')
+        }
+    })
+});

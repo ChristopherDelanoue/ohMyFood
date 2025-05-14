@@ -4,10 +4,17 @@
 *
     margin: 0
 body
+    transform: translateY(100vh)
     background-color: #FFF
-    transition: all 0.5s ease
-    transform: translateY(0)
+    transition: transform 0.3s ease
     opacity: 1
+
+.loaded
+    transform: translateY(0vh)
+
+.return
+    transform: translateY(100vh)
+
 nav
     color: color.$darkGrey
     width: 100vw
@@ -106,12 +113,7 @@ main
                 align-items: flex-end
                 justify-content: space-between
                 width: 100%
-                &:hover
-                    width: 85%
-                    transition: width 0.4s ease-in-out
-                    transform-origin: right
-                    @media screen and (min-width: 1000px)
-                        width: 100%
+                min-width: 85%
                 .desc
                     display: flex
                     flex-direction: column
@@ -160,7 +162,7 @@ main
 
 .div-commande
     display: flex
-    padding: 0 0 30px 0
+    padding: 0 0 40px 0
     transform: translateY(20px)
     .button-gradiant
         @include color.gradiant
@@ -213,7 +215,7 @@ footer
                     font-size: 16px
                     font-family: 'Roboto', sans-serif
                     @media screen and (min-width: 1000px)
-                        padding-left: 10px
+                        padding-left: 5px
 
 
 @keyframes slide-out
@@ -230,6 +232,7 @@ footer
         transform: translateY(100vh)
         opacity: 0
 
+
 @keyframes like-anim
     0%
         width: 0
@@ -242,12 +245,14 @@ footer
     0%
         width: 15%
         max-width: 65px
-
     100%
-        width: 0
+        width: 0%
 
 .slide
     animation: slide-out .3s linear both
+
+.slide-in
+    animation: slide-up 3s linear both
 
 .liked
     animation: like-anim .2s linear both
