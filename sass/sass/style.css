@@ -11,7 +11,12 @@ header .logo {
   display: flex;
   position: relative;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  height: 96px;
+  height: 63px;
+}
+@media screen and (min-width: 1000px) {
+  header .logo {
+    height: 96px;
+  }
 }
 header .logo img {
   display: block;

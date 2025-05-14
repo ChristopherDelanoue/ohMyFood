@@ -21,7 +21,12 @@ nav header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 96px;
+  height: 63px;
+}
+@media screen and (min-width: 1000px) {
+  nav header {
+    height: 96px;
+  }
 }
 nav header i {
   align-content: center;
