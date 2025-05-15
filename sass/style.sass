@@ -5,6 +5,20 @@
     margin: 0px
     font-family: 'Roboto', sans-serif
 
+.start-anim
+    position: absolute
+    z-index: 1
+    text-align: center
+    align-content: center
+    height: 100vh
+    width: 100vw
+    animation: off 0.5s linear both
+    animation-delay: 1.5s
+    .wait
+        color: color.$darkGrey
+        transform: rotate(0deg)
+        font-family: "Shrikhand", "Times New Roman", Times, serif
+        animation:  anim-logo 2s cubic-bezier(.7,-0.01,.08,1.1) both
 header
     display: flex
     flex-direction: column
@@ -51,7 +65,9 @@ header
         @include color.gradiant
         box-shadow: color.$shadow
         &:hover
+            @include color.gradiantLight
             cursor: pointer
+            box-shadow: color.$darkShadow
 
 .fonctionnement 
     @include color.section
@@ -223,6 +239,8 @@ footer
                 display: flex
                 align-items: center
                 align-content: center
+                text-decoration: none
+                color: white
                 gap: 5px
                 @media screen and (min-width: 1000px)
                     gap: 0px
@@ -237,3 +255,34 @@ footer
                     font-family: 'Roboto', sans-serif
                     @media screen and (min-width: 1000px)
                         padding-left: 10px
+
+
+@keyframes anim-logo
+    0%
+        transform: rotate(0deg)
+    25%
+        transform: rotate(180deg)
+    50%
+        transform: rotate(360deg)
+    75%
+        transform: rotate(540deg)
+        opacity: 1
+    100%
+        transform: rotate(720deg)
+        opacity: 0.2
+
+
+@keyframes off
+    0%
+        position: absolute
+        background-color: rgba(147, 86, 220, 0.5)
+        backdrop-filter: blur(5px)
+        opacity: 1
+        z-index: 1
+        height: 100vh
+        width: 100vw
+    95%
+        opacity: 0.5
+    100%
+        opacity: 0
+        z-index: -1
