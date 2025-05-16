@@ -310,29 +310,29 @@ footer div .groupe-lien a p {
 }
 
 #entrees {
-  transform: translateY(2000px);
+  opacity: 0;
   animation: groupe-menu 0.3s ease-out both;
   animation-delay: 0.5s;
 }
 
 #plats {
-  transform: translateY(2000px);
+  opacity: 0;
   animation: groupe-menu 0.3s ease-out both;
   animation-delay: 1s;
 }
 
 #desserts {
-  transform: translateY(2000px);
+  opacity: 0;
   animation: groupe-menu 0.3s ease-out both;
   animation-delay: 1.5s;
 }
 
 @keyframes groupe-menu {
   0% {
-    transform: translateY(2000px);
+    opacity: 0;
   }
   100% {
-    transform: translateY(0px);
+    opacity: 1;
   }
 }
 @keyframes slide-out {
