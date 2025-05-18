@@ -22,8 +22,11 @@
                     <img src="./ImagesTextesOhmyfood/images/logo/ohmyfood.png" alt="logo ohmyfood">
                 </div>
                 <div class="location">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Paris, Belleville</p>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-location-dot" id="placeholder-icon"></i>
+                        <label class="custom-placeholder" >Paris, Belleville</label>
+                        <input type="text" class="customInput" oninput="this.nextElementSibling.style.display = this.value ? 'none' : 'block';">
+                    </div>
                 </div>
             </nav>
         </header>

@@ -45,7 +45,42 @@ header
         color: color.$darkGrey
         height: 50px
         box-shadow: color.$shadow
-    
+        .input-wrapper
+            position: relative
+            display: inline-block
+            align-items: center
+            justify-content: center
+            &:focus-within
+                .custom-placeholder
+                    opacity: 0
+            input
+                padding-left: 40px
+                font-size: 16px
+                height: 30px
+                border-radius: 20px
+                border: none
+                font-family: 'Roboto', sans-serif
+            i
+                position: absolute
+                align-content: center
+                top: 50%
+                left: 10px
+                transform: translateY(-50%)
+                height: 20px
+                pointer-events: none
+                opacity: 1
+                transition: opacity 0.2s
+            .custom-placeholder
+                position: absolute
+                top: 50%
+                left: 40px
+                transform: translateY(-50%)
+                color: #888
+                font-family: 'Roboto', sans-serif
+                font-size: 16px
+                pointer-events: none
+                transition: opacity 0.2s
+
 .reservation
     padding: 50px 20px
     text-align: center
