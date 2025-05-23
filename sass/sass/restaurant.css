@@ -314,20 +314,20 @@ footer div .groupe-lien a p {
 
 #entrees {
   opacity: 0;
-  animation: groupe-menu 0.3s ease-out both;
-  animation-delay: 0.5s;
+  animation: groupe-menu 1s ease-out both;
+  animation-delay: 1.5s;
 }
 
 #plats {
   opacity: 0;
-  animation: groupe-menu 0.3s ease-out both;
-  animation-delay: 1s;
+  animation: groupe-menu 1s ease-out both;
+  animation-delay: 2s;
 }
 
 #desserts {
   opacity: 0;
-  animation: groupe-menu 0.3s ease-out both;
-  animation-delay: 1.5s;
+  animation: groupe-menu 1s ease-out both;
+  animation-delay: 2.5s;
 }
 
 @keyframes groupe-menu {

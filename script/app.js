@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     // validation des plats
-    /*const plats = document.querySelectorAll('.plat');
+    const plats = document.querySelectorAll('.plat');
     plats.forEach(plat => {
         plat.addEventListener('click', function() {
             const like = this.querySelector('.like');
@@ -29,6 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 like.classList.add('like-retour');
             }
         });
-    });*/
+    });
 });
 
