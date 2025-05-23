@@ -141,10 +141,11 @@ main .class-menu .plat .space-between {
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
+  overflow: hidden;
   width: 100%;
 }
 main .class-menu .plat .space-between:hover {
-  min-width: 85%;
+  min-width: calc(100% - 65px);
 }
 main .class-menu .plat .space-between:hover + .like {
   width: 65px;
@@ -155,6 +156,8 @@ main .class-menu .plat .space-between .desc {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  flex-grow: 1;
+  transition: all 0.4s linear;
 }
 main .class-menu .plat .space-between .desc h3 {
   margin: 0;
@@ -369,8 +372,7 @@ footer div .groupe-lien a p {
     max-width: 65px;
   }
   100% {
-    width: 15%;
-    max-width: 65px;
+    width: 65px;
   }
 }
 @keyframes like-retour {
