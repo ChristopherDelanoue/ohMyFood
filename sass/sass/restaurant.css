@@ -147,9 +147,6 @@ main .class-menu .plat .space-between {
 main .class-menu .plat .space-between:hover {
   min-width: calc(100% - 65px);
 }
-main .class-menu .plat .space-between:hover + .like {
-  width: 65px;
-}
 main .class-menu .plat .space-between .desc {
   display: flex;
   flex-direction: column;

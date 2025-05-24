@@ -24,9 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!like.classList.contains('liked')) {
                 like.classList.add('liked');
                 like.classList.remove('like-retour');
+                console.log(`j'ouvre la balise`)
             } else {
                 like.classList.remove('liked');
                 like.classList.add('like-retour');
+                console.log(`je ferme la balise`)
             }
         });
     });
